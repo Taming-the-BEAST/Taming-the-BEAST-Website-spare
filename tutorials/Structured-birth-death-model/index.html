@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Structured birth death model</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.xml">
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Structured-birth-death-model/">Structured birth death model</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Population structure using the multi-type birth-death model
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Denise Kühnert
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/Structured-birth-death-model/Structured-birth-death-model.pdf">Structured-birth-death-model.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/data/h3n2_2deme.fa" target="_blank" download>
+						h3n2_2deme.fa
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/xml/h3n2-bdmm-v2-hacking.xml" target="_blank" download>
+						h3n2-bdmm-v2-hacking.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/xml/h3n2-bdmm-v2.xml" target="_blank" download>
+						h3n2-bdmm-v2.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm-v2-samplingPrior.h3n2_2deme.map.trees" target="_blank" download>
+						h3n2-bdmm-v2-samplingPrior....
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm-v2-samplingPrior.h3n2_2deme.trees" target="_blank" download>
+						h3n2-bdmm-v2-samplingPrior....
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm-v2-samplingPrior.h3n2_2deme.typedNode.trees" target="_blank" download>
+						h3n2-bdmm-v2-samplingPrior....
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm-v2-samplingPrior.log" target="_blank" download>
+						h3n2-bdmm-v2-samplingPrior.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm-v2-samplingPrior.xml.state" target="_blank" download>
+						h3n2-bdmm-v2-samplingPrior....
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=3&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/4f53def37841b7e88c32bc53e7d00c299de4113b">
+					08 Dec 2016 - <span class="text-gray">Fix references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/8df8c0c08e7ef12a9b6bb7ce2ed8e0f0c5b2411c">
+					08 Dec 2016 - <span class="text-gray">Rename references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/c839e797a7af32ba225abecea75a33c3c5519649">
+					08 Dec 2016 - <span class="text-gray">Add figure captions</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/21b2a72b16faa2cefa6ffb9397bc6cfe6dd8712f">
+					28 Nov 2016 - <span class="text-gray">Add Latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/e4e246ed22f3d3dc731f666acc60a7f4deeaef57">
+					03 Nov 2016 - <span class="text-gray">Add level</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+		
+	</div>
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Introduction</h1>
+
+<p>In this tutorial (adapted from Tim Vaughan&#39;s <a href="https://github.com/CompEvol/MultiTypeTree/wiki/Beginner&#x27;s-Tutorial-(short-version)">Structured Coalescent tutorial</a>), we will use the <a href="http://www.beast2.org/">BEAST 2</a> package
+<a href="https://github.com/denisekuehnert/bdmm">bdmm</a> to perform a Bayesian
+phylogenetic analysis of an influenza data set using the multi-type birth-death
+model.
+(Note that both, the structured coalescent and the multi-type birth-death model, are tree priors implemented in BEAST2. Both of them utilize the multi-type tree structure of the MultiTypeTree package. While the structured coalescent is part of the MultiTypeTree package, the multi-type birth-death model has its own package bdmm (aka birth-death migration model).)</p>
+
+<p>The data set used in this tutorial is a thinned (60 sequence) subset of the
+(980 sequence) data set used in the publication <a href="#Vaughan2014">(Vaughan, Kühnert, Popinga, Welch, &amp; Drummond, 2014)</a>, which in turn was
+assembled from publicly-available data sets provided by various authors on
+<a href="http://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>.</p>
+
+<h2>Software Requirements</h2>
+
+<p>In order to proceed, ensure you have the latest version (currently 2.4) of
+<a href="http://www.beast2.org/">BEAST 2</a> installed.  To analyze the inference results
+you&#39;ll also need a recent version of
+<a href="http://tree.bio.ed.ac.uk/software/tracer/">Tracer</a> and an up-to-date version of 
+<a href="http://www.google.com/chrome">Google Chrome</a> or
+<a href="https://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>.</p>
+
+<h2>Installing the bdmm package</h2>
+
+<p>You can easily install this package via BEAUti&#39;s package manager.  To do this, follow these steps:</p>
+
+<ol>
+<li>Start BEAUti</li>
+<li>From the <em>File</em> menu, select <em>Manage packages</em>.</li>
+<li>Find &quot;bdmm&quot; in the list of packages shown, select it and then click &quot;Install/Upgrade&quot;:</li>
+</ol>
+
+<figure>
+    <a id="fig:"></a>
+    <img style="width:75%;" src="figures/1-install-bdmm.png" alt="">
+    <figcaption>Figure 1: Install bdmm.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>(Note the actual version of bdmm may differ from the version shown in
+the figure. This is normal.)</p>
+
+<p>Finally, <strong>restart BEAUti.</strong>  This is very important.  Strange behaviour may result if you do not restart the program.</p>
+
+<h1>Setting up the analysis using BEAUti</h1>
+
+<h2>Loading the Template</h2>
+
+<p>A BEAUTI template defines the basic structure and contents of your XML file. Because by default BEAUTI will construct an XML file with standard BEAST trees, rather than MultiTypeTrees, we cannot use the default template (Standard.xml). Hence, from the <em>File</em> menu, select <em>Template</em> and then choose <em>MultiTypeBirthDeath</em>. </p>
+
+<figure>
+    <a id="fig:"></a>
+    <img style="width:50%;" src="figures/2-choose-bdmm-template.png" alt="">
+    <figcaption>Figure 2: Load the MultiTypeBirthDeath template.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Loading the data</h2>
+
+<p>Once the template is loaded, we can load in our example sequence data.  In our case, this data is stored in a FASTA file, the first few lines of which look like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&gt; EU856841_HongKong_2005.34246575
+-----------GGGATAATTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTT
+&gt; EU856989_HongKong_2002.58356164
+--CAAAAGCAGGGGATAATTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTT...
+&gt; CY039495_HongKong_2004.5890411
+------------------TTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
+&gt; EU856853_HongKong_2001.17808219
+---------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
+&gt; CY010084_NewZealand_2005.62739726
+---------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
+&gt; CY007387_NewZealand_2004.63287671
+---------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
+&gt; CY012432_NewZealand_2000.81643836
+---------------------------CCATGAAGACTATCATTGCTTTGAGCTACATTT...
+</code></pre></div>
+<p>The lines beginning with &quot;&gt;&quot; are labels for the sequences immediately
+following.  In general, these labels have no special format, but in this file
+each label is an underscore-delimited triple.  The first element of each triple
+is the GenBank accession number of the sequence, the second is the geographical
+region from which it was sampled, and the third is the time at which it was
+sampled measured in calendar years or fractions thereof.  (The ellipses are not
+in the file, but are used here to indicate that sequence has been truncated.)</p>
+
+<p>In this tutorial we will be using the influenza sequence data which is
+distributed with MultiTypeTree.  To make this easy to find, open the <em>File</em>
+menu and select <em>Set working dir</em>.  Then, from the submenu that appears, select
+<em>MultiTypeTree</em>.</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img style="width:50%;" src="figures/3-set-working-dir.png" alt="">
+    <figcaption>Figure 3: Set the working directory to MultiTypeTree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>(This step is not required when loading your own data.)</p>
+
+<p>To load the file, open the <em>File</em> menu and select <em>Add alignment</em>.  This
+will open a file selection dialog box.  The example influenza sequence data
+file is named <code>h3n2_2deme.fna</code>.  Assuming you have followed the previous step to set
+the working directory, this can be found in the <code>examples/</code> directory shown
+when the file selection dialog box loads.</p>
+
+<p>Once this file is loaded, your BEAUti screen should look something like the following:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/4-alignment-loaded.png" alt="">
+    <figcaption>Figure 4: The alignment loaded into BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Setting up dates</h2>
+
+<p>Once the data is loaded, the next step is to specify the times at which the sequences were sampled:</p>
+
+<ol>
+<li>Select the &quot;Tip Dates&quot; panel.</li>
+<li>Check the &quot;Use tip dates&quot; checkbox.</li>
+<li>Click the &quot;Guess&quot; button at the top-right of the panel. This opens a dialog
+that allows sample times to be loaded from a file or inferred (guessed) from
+the sequence labels.</li>
+<li>Because the times are included as the last element of the
+underscore-delimited sequence names, choose the &quot;use everything&quot; radio
+button and select &quot;after last&quot; from the drop-down menu. (Note that the
+underscore character is already chosen as the delimiter.)</li>
+</ol>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/5-tip-dates.png" alt="">
+    <figcaption>Figure 5: Guessing the tip-dates.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After clicking &quot;OK&quot; you should find that the tip date table is populated with
+times that match those in the sequence headers, and that the last column of the
+table contains &quot;heights&quot; (times before most recent sample) calculated from the
+times:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/5b-tip-dates-set.png" alt="">
+    <figcaption>Figure 6: Sampling dates in BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Setting up locations</h2>
+
+<p>Now that we&#39;ve specified the sampling times, we move on to specifying the sampling
+locations.  To do this, we follow a very similar set of steps to those we used
+to set the sample times:</p>
+
+<ol>
+<li>Select the &quot;Tip Locations&quot; panel.  You&#39;ll find that the locations are
+already populated with default values.</li>
+<li>Click the &quot;Guess&quot; button at the top-right of the panel.  This opens the same
+dialog that we saw in the previous section.</li>
+<li>Because the locations are included as the second element of the
+underscore-delimited sequence names, choose the &quot;split on character&quot;
+radio button and select group 2 from the drop-down menu.  (Note again that the
+underscore character is already chosen as the delimiter.)</li>
+</ol>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/6-tip-types.png" alt="">
+    <figcaption>Figure 7: Guessing the locations.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After clicking &quot;OK&quot; you should find that the tip location table is populated
+with locations that match those in the sequence headers, as follows:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/6b-tip-types-set.png" alt="">
+    <figcaption>Figure 8: The locations in BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Substitution model</h2>
+
+<p>For this analysis, we will use the HKY substitution model with 4 gamma categories and estimated base frequencies. To configure this in BEAUti, switch to the &quot;Site Model&quot; panel, change the number of gamma categories and select HKY from the drop-down menu (the default option is JC69). We also want the shape and proportionInvariant parameters to be nonzero and estimated to account for heterogeneity between sites in our alignment. </p>
+
+<p>The BEAUti panel should now look like the following:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/7-sitemodel.png" alt="">
+    <figcaption>Figure 9: Setup of the site model.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Note that the &quot;Substitution rate&quot; defined on this panel should be left
+non-estimated - we use the &quot;Clock rate&quot; defined in the &quot;Clock Model&quot; panel to
+determine the average per unit time rate of sequence evolution.  Used this way,
+the &quot;substitution rate&quot; is therefore not actually a rate (it&#39;s actually
+dimensionless) but is instead a rate multiplier that in our case we fix at 1.</p>
+
+<h2>Defining Clock model</h2>
+
+<p>For this analysis we assume a strict clock. Since our alignment contains
+sequences sampled at different times and those times are measured in years, we
+must use a real clock rate expressed in units of expected substitutions per
+site per year.  Usually the precise value is unknown and so the default behaviour of BEAUti is to assume this rate is to be estimated.  We set the clock rate to 0.005, which we know is much closer to the truth than the default 1, to speed up mixing. The Clock Model panel should now look like this:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/8-strict-clock.png" alt="">
+    <figcaption>Figure 10: Fix the clock rate to speed up mixing.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Adjusting Priors</h2>
+
+<p>Because bdmm is a model-based prior on the (multi-type) tree distribution, setting up the &quot;Priors&quot; panel is a particularly important part of setting up this analysis.</p>
+
+<p>It is important to change the time at which sampling started, counting from the time of the last sample. In our case, the time between the first and last sample is 5.57 (rounded UP). Note, that the sampling proportion has 4 entries, let&#39;s call them [s11,s12,s21,s22]. The values s11 and s12 belong to type 1 (HongKong) and s21, s22 belong to type 2 (New Zealand). The values s11 and s21 belong to the first interval, which is the time before the first sample, which is why s11=s21=0. </p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/9-priors.png" alt="">
+    <figcaption>Figure 11: Set the change time for the sampling proportion so it is zero before the time of the first sample.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>When you expand the tree prior element, you can change the condition on survival setting. We&#39;ll leave the box checked. </p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/9b-condition.png" alt="">
+    <figcaption>Figure 11: Condition on survival.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Ensure the value shown in the &quot;State Number&quot; spinner is equal to the
+   number of types present in your model. In this case, the default value of 2
+   is correct, but in general you should check your data and change this value accordingly. </p>
+
+<p>Click the arrows on the left-hand side of each parameter to alter
+   the details of these priors. For example, we will set the rateMatrix prior distribution to Exp(1):</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/9d-prior-rateMatrix.png" alt="">
+    <figcaption>Figure 12: Set the prior for the rate matrix.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We will use the default set-up for the MCMC and save our file as usual. </p>
+
+<h1>Running the analysis using BEAST</h1>
+
+<p>To run the analysis, simply start BEAST 2 in the manner appropriate for your
+platform, then select the file you generated in the last section as the input
+file.  (Refer to the documentation provided at
+<a href="http://www.beast2.org/">www.beast2.org</a> for detailed instructions.)</p>
+
+<h1>Analyzing the results</h1>
+
+<p>The results of the analysis primarily consist of two parts:</p>
+
+<ol>
+<li>The parameter log, which is written to the file <code>h3n2-bdmm-v2-samplingPrior.log</code>.</li>
+<li>The tree log, which is written to <code>h3n2-bdmm-v2-samplingPrior.h3n2_2deme.trees</code>.</li>
+</ol>
+
+<p>In addition, the file <code>h3n2-bdmm-v2-samplingPrior.h3n2_2deme.map.trees</code> contains the running
+estimate of the MAP tree as a function of MCMC step number, while the file
+<code>h3n2-bdmm-v2-samplingPrior.h3n2_2deme.typedNode.trees</code> is the TreeAnnotator-compatible file
+we&#39;ll use to assemble a summary tree.</p>
+
+<h2>Parameter log file analysis</h2>
+
+<p>We can use the program <a href="http://tree.bio.ed.ac.uk/software/tracer/">Tracer</a> to
+view the parameter log file. To do this, start Tracer and then press the &quot;+&quot;
+button in the top-left hand corner of the window (under &quot;Trace files&quot;). Select
+the log file for this analysis (<code>h3n2_2deme.log</code>) from the file selection dialog box.
+The &quot;Traces&quot; table will then be populated with parameters and summary
+statistics corresponding to our multitype birth-death analysis.</p>
+
+<p>Important traces are:
+* <code>R0.t:h3n2_2deme1</code> and <code>R0.t:h3n2_2deme2</code>: These give the effective reproduction numbers for deme 1 (Hongkong) and 2 (New Zealand), respectively.</p>
+
+<ul>
+<li><p><code>rateMatrix.t:h3n2_2deme1</code>    <code>rateMatrix.t:h3n2_2deme2</code>: These give the (per lineage per year) migration rates from deme 1 to 2 and vice versa.</p></li>
+<li><p><code>Tree.t:h3n2_2deme.count_HongKong_to_NewZealand</code>: these give the actual number of ancestral
+migrations from HongKong to New Zealand.</p></li>
+</ul>
+
+<p>The panels tabs at the top-right of the window can be used to display one or
+more selected traces in various ways.  For example, selecting the two R0 traces and choosing the &quot;Marginal prob distribution&quot; panel results in the following useful comparison between the sampled population size
+marginal posterior distributions:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/tracer-R0.png" alt="">
+    <figcaption>Figure 13: Estimated <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">R_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> marginal posteriors.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Note that some of the ESS values are still less than 200 - the arbitrary
+threshold for acceptability. If this analysis were part of a serious study you
+would want to run the chain for another few million iterations to improve
+these. (In BEAST 2, analyses can be resumed - the samples you&#39;ve already
+acquired will not be wasted.) For the purposes of this tutorial, however, these
+values are acceptable.</p>
+
+<h2>Tree log visualization</h2>
+
+<p>The popular phylogenetic tree visualizer
+<a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a> can be used to visualize
+the sampled trees.  Be warned, however, that FigTree currently
+takes an extremely long time to load even relatively small (a few megabyte)
+MultiTypeTree logs.</p>
+
+<p>For this reasons we suggest using <a href="http://tgvaughan.github.io/icytree">IcyTree</a>
+to view tree log files and maybe switching to FigTree to visualize summary
+trees as discussed in the next section.  (Also, IcyTree can be used to export
+individual trees from a large log file for subsequent viewing using FigTree.)
+IcyTree is a tree viewer that runs in a web browser.  It runs best under recent
+versions of <a href="http://www.google.com/chrome">Google Chrome</a> and <a href="https://www.mozilla.org/en-US/firefox/">Mozilla
+Firefox</a> (in that order).</p>
+
+<p>To view MultiTypeTree log files using IcyTree, simply navigate to the IcyTree
+web page, select &quot;Load from file&quot; from the &quot;File&quot; menu, then select one of the
+tree log files using the file selection dialog. Once the file is loaded you
+will see the first tree it contains.  In order to select a different tree, move
+the mouse pointer over the box in the lower-left corner of the window.  This
+box will expand to a small dialog containing buttons allowing you to navigate
+between trees. The &#39;&lt;&#39; and &#39;&gt;&#39; buttons move in steps of 1 tree, while &#39;&lt;&lt;&#39; and
+&#39;&gt;&gt;&#39; move 10% of the tree file per click.  You can also directly enter the
+index of a tree.  (Note that there are keyboard shortcuts for almost all
+commands in IcyTree and that these can be found by selecting &quot;Keyboard
+shortcuts&quot; from the &quot;Help&quot; menu.)</p>
+
+<p>Initially the trees edges will be uncoloured.  To colour the edges according to
+the edge type, open the &quot;Style&quot; menu, navigate to the &quot;Colour edges by&quot; submenu
+and select &quot;type&quot;. A legend and axis can be added by choosing &quot;Display legend&quot;
+and &quot;Axis &gt; Age&quot; from the same menu.</p>
+
+<p>The following shows the final tree of <code>h3n2-bdmm-v2-samplingPrior.h3n2_2deme.map.trees</code> in IcyTree, which
+represents our sampled estimate of the MAP multi-type tree:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/icyTreeMAP.png" alt="">
+    <figcaption>Figure 14: The MAP multi-type tree in IcyTree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>While IcyTree is useful for rapidly visualizing the results of an analysis, it
+is not nearly as feature-rich as FigTree and not as capable for producing
+publication-quality graphics.  Happily, however, IcyTree can extract single
+trees from larger log files. Simply navigate to the desired tree, open the
+&quot;File&quot; menu, choose the &quot;Export tree as&quot; submenu and select &quot;NEXUS file&quot;. (It
+is important to select &quot;NEXUS&quot; instead of &quot;Newick&quot; as the Newick format does
+not support the annotations that MultiTypeTree uses to mark the edge types.)</p>
+
+<h2>Producing a summary tree using TreeAnnotator</h2>
+
+<p>While it is tempting to view the MAP tree shown above as the primary result of
+the phylogenetic side of our analysis it is very important to remember that
+this is only a point estimate and says nothing about the uncertainty present in
+the result.  This is an important drawback, as we have done a full Bayesian
+analysis and have access to a large number of samples from the full posterior
+in the tree log files. The MAP tree discards almost all of this information.</p>
+
+<p>We can make better use of our raw analysis results by using the TreeAnnotator
+program which is distributed with BEAST to analyze the
+<code>typedNode</code> trees which were produced by our MCMC run.  To do this,
+simply load TreeAnnotator and select the <code>typedNode</code> tree file as
+the input file and <code>h3n2-bdmm-v2-samplingPrior.h3n2_2deme.summary.trees</code> as the output file.  Select &quot;Mean
+heights&quot; from the &quot;Node heights&quot; menu and set the burn-in percentage to 10:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img style="width:50%;" src="figures/treeannotator.png" alt="">
+    <figcaption>Figure 15: Use TreeAnnotator to produce a summary tree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Pressing the &quot;Run&quot; button will now produce an annotated summary tree.</p>
+
+<p>To visualize this tree, open IcyTree once more (maybe open it in a new browser
+tab), choose File-&gt;Open, then select the file
+<code>h3n2_2deme.h3n2_2deme.summary.tree</code> using the file selection dialog. Follow
+the instructions provided for the MAP tree above to colour the tree by the
+&quot;type&quot; attribute and add the legend and time axis. In addition, open the Style
+menu and from the &quot;Node height error bars&quot; sub-menu select &quot;height_95%_HPD&quot; to
+add error bars to the internal node heights. Also, open the Style menu and from
+the &quot;Edge opacity&quot; sub-menu select &quot;type.prob&quot;. This will cause the edges to
+become increasingly transparent as the posterior probability for the displayed
+colour decreases.</p>
+
+<p>Once these style preferences have been set, you should see something similar to
+the following:</p>
+
+<figure>
+    <a id="fig:"></a>
+    <img src="figures/icyTreeSummary.png" alt="">
+    <figcaption>Figure 16: The summary tree in IcyTree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Here we have a full consensus tree annotated by the locations at coalescence
+nodes and showing node height uncertainty, with the widths of the edges
+representing how certain we can be of the location estimate at each point on
+the tree. This is a much more comprehensive summary of the phylogenetic side of
+our analysis.</p>
+
+<p>One thing to pay attention to here is that the most probable root location is
+given by the summary tree to be Hong Kong (under our model which assumes that
+only Hong Kong and New Zealand exist). By hovering the mouse cursor over the
+tiny edge above the root will bring up a table in which posterior probability
+of the displayed root location (<code>type.prob</code>) can be seen to be approximately
+90%. The analysis therefore strongly supports a Hong Kong origin over a New
+Zealand origin.  </p>
+
+<p><a href="https://github.com/CompEvol/MultiTypeTree/wiki/Beginner%27s-Tutorial-%28short-version%29#final-notes">Very useful final notes from Tim</a></p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="https://github.com/denisekuehnert/bdmm">Multi-type birth-death process package</a> <a href="#Kuhnert2016">(Kühnert, Stadler, Vaughan, &amp; Drummond, 2016)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Vaughan2014">Vaughan, T. G., Kühnert, D., Popinga, A., Welch, D., &amp; Drummond, A. J. (2014). Efficient Bayesian inference under the structured coalescent. <i>Bioinformatics</i>, <i>30</i>(16), 2272–2279. http://doi.org/10.1093/bioinformatics/btu201</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
+<li><span id="Kuhnert2016">Kühnert, D., Stadler, T., Vaughan, T. G., &amp; Drummond, A. J. (2016). Phylodynamics with Migration: A Computational Framework to Quantify Population Structure from Genomic Data. <i>Molecular Biology and Evolution</i>. http://doi.org/10.1093/molbev/msw064</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

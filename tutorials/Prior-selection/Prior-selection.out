@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this Exercise}{}% 2
+\BOOKMARK [1][-]{section.3}{Practical: H3N2 flu dynamics - heterochronous data}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{The Data}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Creating the Analysis File with BEAUti}{section.3}% 5
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Installing BEAST 2 Plug-Ins}{subsection.3.2}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Importing alignment}{subsection.3.2}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Setting up tip dates}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Specifying the Site Model}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Specifying the Clock Model}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Selecting Priors}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.7}{MCMC}{subsection.3.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Setting up the Markov Chain properties}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.9}{Analyzing the results}{subsection.3.2}% 14
+\BOOKMARK [1][-]{section.4}{Practical: H3N2 flu dynamics - homochronous data}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Estimating the substitution rate from homochronous data}{section.4}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Creating Taxon Sets}{subsection.4.1}% 17
+\BOOKMARK [1][-]{section.5}{Useful Links}{}% 18
