@@ -5,7 +5,9 @@ make.pps.tr <- function(sims, empdat, topo, model = "JC"){
 	 if(model == "JC"){
 	 	 emphy <- optim.pml(pml(topo, empdat))
 	 } else if(model == "GTR+G"){
-	   	 emphy <- optim.pml(pml(topo, empdat), optBf=FALSE, optQ=FALSE, optGamma = T)
+	   	 emphy <- optim.pml(pml(topo, empdat, k = 4), optBf=FALSE, optQ=FALSE, optGamma = T)
+	 } else if(model == "GTR"){
+	   	 emphy <- optim.pml(pml(topo, empdat), optBf=FALSE, optQ=FALSE)
 	 }
 	 empmlik <- multlik(empdat)
 	 empbl <- emphy$tree$edge.length
@@ -15,13 +17,16 @@ make.pps.tr <- function(sims, empdat, topo, model = "JC"){
 	       if(model == "JC"){
 	       		ppsphy <- optim.pml(pml(topo, sims[[i]][[3]]))
 	       } else if(model == "GTR+G"){
-	       	        ppsphy <- optim.pml(pml(topo, sims[[i]][[3]]), optBf=FALSE, optQ=FALSE, optGamma = T)
-	       }
+	       	        ppsphy <- optim.pml(pml(topo, sims[[i]][[3]], k = 4), optBf=FALSE, optQ=FALSE, optGamma = T)
+	       } else if(model == "GTR"){
+			ppsphy <- optim.pml(pml(topo, sims[[i]][[3]]), optBf=FALSE, optQ=FALSE)
+       	       }
 	       simbl <- rbind(simbl, ppsphy$tree$edge.length)
 	       simultlik[i] <- multlik(sims[[i]][[3]])
 	       print(paste("Simulation", i, "processed"))
 	 }
 	 simbl <- simbl[2:nrow(simbl),]
+	 print(model)
 	 return(list(empbl, simbl, empmlik, simultlik))
 
 }

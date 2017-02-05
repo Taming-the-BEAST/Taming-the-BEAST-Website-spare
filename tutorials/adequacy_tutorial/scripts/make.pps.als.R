@@ -21,7 +21,7 @@ make.pps.als <- function(trees.file, log.file, N = 100, l = 1000){
 		     trr$edge.length <- trr$edge.length * tr$edge.length
 	      	     sim[[i]] <- list(phylogram = trr)
 	      }
-	      
+	      print(sim)
 	      
 	      if(all(c("rateAC", "rateAG", "rateAT", "rateCG", "rateGT") %in% colnames(logdat))){
 	      	     # GENERAL TIME REVERSIBLE (GTR)

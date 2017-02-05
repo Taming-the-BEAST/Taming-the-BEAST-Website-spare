@@ -83,7 +83,7 @@
       <file>Structured-coalescent-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>master_refs.bib</file>
+      <file>master-refs</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
