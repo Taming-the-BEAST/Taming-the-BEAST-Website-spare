@@ -996,7 +996,7 @@
     \field{year}{2014}
   \endentry
 
-  \entry{heibl2008phyloch}{misc}{}
+  \entry{heibl2008phyloch}{article}{}
     \name{author}{1}{}{%
       {{hash=HC}{%
          family={Heibl},
@@ -1012,9 +1012,9 @@
     \field{labelyear}{2008}
     \field{sortinit}{H}
     \field{sortinithash}{H}
+    \field{pages}{\url{http://www.christophheibl.de/Rpackages.html}}
     \field{title}{PHYLOCH: {R} language tree plotting tools and interfaces to
-  diverse phylogenetic software packages.
-  http://www.christophheibl.de/Rpackages.html}
+  diverse phylogenetic software packages}
     \field{year}{2008}
   \endentry
 
@@ -2237,6 +2237,32 @@
     \field{volume}{15}
     \field{journaltitle}{Molecular Biology and Evolution}
     \field{year}{1998}
+  \endentry
+
+  \entry{Vaughan2017}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima Glenn},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VTG1}
+    \strng{fullhash}{VTG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb https://doi.org/10.1093/bioinformatics/btx155
+    \endverb
+    \field{pages}{in press}
+    \field{title}{{IcyTree}: Rapid browser-based visualization for phylogenetic
+  trees and networks}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2017}
   \endentry
 
   \entry{warnock12}{article}{}
