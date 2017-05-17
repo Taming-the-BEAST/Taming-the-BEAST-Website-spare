@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Taming the BEAST - Tutorials</title>
+		<description>BEAST2 tutorials for the community, by the community! - Recently modified tutorials</description>
+		<link>http://taming-the-beast.github.io/</link>
+		<atom:link href="http://taming-the-beast.github.io//feed.tutorials.xml" rel="self" type="application/rss+xml" />
+				
+			<item>
+				<title>Prior selection</title>
+				<description>Prior selection and clock calibration using Influenza A data</description>
+				<pubDate>Fri, 02 Jun 2017 11:47:04 +0100</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline plots</title>
+				<description>Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.</description>
+				<pubDate>Thu, 01 Jun 2017 14:55:11 +0100</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
+				<title>FBD tutorial</title>
+				<description>Dating Species Divergences with the Fossilized Birth-Death Process</description>
+				<pubDate>Wed, 17 May 2017 08:54:23 +0100</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Bacter Tutorial</title>
+				<description>Taming the BEAST Tutorial for Bacter</description>
+				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>adequacy_tutorial</title>
+				<description></description>
+				<pubDate>Thu, 09 Feb 2017 01:43:32 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Structured coalescent</title>
+				<description>Population structure using MultiTypeTree</description>
+				<pubDate>Thu, 09 Feb 2017 00:26:57 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Structured-coalescent/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-coalescent/</guid>
+			</item>
+				
+			<item>
+				<title>calibrated species trees</title>
+				<description>Tutorial for Taming the BEAST in the South Pacific</description>
+				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</guid>
+			</item>
+				
+			<item>
+				<title>species tree clocks</title>
+				<description>Using StarBEAST2 with species tree relaxed clocks, for Taming the BEAST in the South Pacific</description>
+				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/species-tree-clocks/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/species-tree-clocks/</guid>
+			</item>
+				
+			<item>
+				<title>StarBeast Tutorial</title>
+				<description>Estimating species tree from multilocus sequence data</description>
+				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting</title>
+				<description>Post-processing and improving performance</description>
+				<pubDate>Tue, 31 Jan 2017 23:18:13 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Troubleshooting/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Troubleshooting/</guid>
+			</item>
+				
+			<item>
+				<title>Introduction to BEAST2</title>
+				<description>This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.</description>
+				<pubDate>Wed, 18 Jan 2017 15:02:03 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model selection</title>
+				<description>A tutorial using bModelTest</description>
+				<pubDate>Wed, 18 Jan 2017 14:51:48 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-selection/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Structured birth death model</title>
+				<description>Population structure using the multi-type birth-death model</description>
+				<pubDate>Wed, 07 Dec 2016 14:05:30 +0000</pubDate>
+				<link>http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</guid>
+			</item>
+		
+	</channel>
+</rss>

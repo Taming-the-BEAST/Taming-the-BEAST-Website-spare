@@ -116,35 +116,6 @@
     \field{year}{2009/2010}
   \endentry
 
-  \entry{drummond07}{article}{}
-    \name{author}{2}{}{%
-      {{hash=DAJ}{%
-         family={Drummond},
-         familyi={D\bibinitperiod},
-         given={A.\bibnamedelima J.},
-         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=RA}{%
-         family={Rambaut},
-         familyi={R\bibinitperiod},
-         given={A.},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{DAJRA1}
-    \strng{fullhash}{DAJRA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2007}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{pages}{214}
-    \field{title}{{BEAST}: {B}ayesian evolutionary analysis by sampling trees}
-    \field{volume}{7}
-    \field{journaltitle}{BMC Evolutionary Biology}
-    \field{year}{2007}
-  \endentry
-
   \entry{drummond10}{article}{}
     \name{author}{2}{}{%
       {{hash=DAJ}{%

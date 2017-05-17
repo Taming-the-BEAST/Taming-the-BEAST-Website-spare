@@ -7,13 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
     <link href="/css/style.css" rel="stylesheet" media="screen">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.png"/>	
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
 
 	<!-- Typekit -->
 	<script>
@@ -81,6 +83,7 @@
 					<li>
 					
 					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
 				</ul>
 			</div>
 			
@@ -340,6 +343,30 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/8ed7feee4ce4ea754428857f2ffc93f9db1a14b0">
+					01 Jun 2017 - <span class="text-gray">Update latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/f056d58fdc0e2f520e6bd26269b10c92a88c3908">
+					01 Jun 2017 - <span class="text-gray">Commit changes from Waiheke</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/2cd567dd6be3d27128213fda2d4e9da72b71df37">
+					06 Feb 2017 - <span class="text-gray">Fix R-script</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/718378bee095df27ebdce040695519b1bb0c8010">
 					04 Feb 2017 - <span class="text-gray">Fix latex tutorial</span>
 					</a> 
@@ -350,30 +377,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/ce590702611676b1eb82cca43c4de3d672d17686">
 					04 Feb 2017 - <span class="text-gray">Fix README.md</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/0e4e57bf75520cc28afd773d10ce2f34d2271c85">
-					04 Feb 2017 - <span class="text-gray">Update markdown tutorial</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/5259fba7fc1f24acb457f37ffb14bd73ac0e2b24">
-					04 Feb 2017 - <span class="text-gray">Update example</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/5c571cbbbc26500693f861d33dcbcd34ff15f817">
-					04 Feb 2017 - <span class="text-gray">Update figures</span>
 					</a> 
 				</li>
 			
@@ -716,14 +719,17 @@ This we can do in the <code>Priors</code> panel. We can use prior information ab
 
 <p><br></p>
 
-<p>We will instead use the R package <code>bdskytools</code> to plot the output of the bdsky. The package is still in development and currently not available over CRAN. Thus, we have to install the package directly over GitHub: </p>
+<p>We will instead use the R package <code>bdskytools</code> to plot the output of the bdsky. The package is still in development and currently not available over CRAN. Thus, we have to install the package directly over GitHub (note that you only have to install the package once): </p>
 <div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
 
 </span><span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"laduplessis/bdskytools"</span><span class="p">)</span><span class="w">
 </span></code></pre></div>
-<p>To plot the results, we need to tell R where to find the <code>*.log</code> file of our run and load it into R (discarding 10% of samples as burn-in): </p>
-<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">fname</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">here</span><span class="o">&gt;&gt;</span><span class="w">
+<p>Once the package is installed we have to load the package into our R workspace before we can use the functions in the package.
+To plot the results, we need to tell R where to find the <code>*.log</code> file of our run and load it into R (discarding 10% of samples as burn-in): </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">library</span><span class="p">(</span><span class="n">bdskytools</span><span class="p">)</span><span class="w">
+
+</span><span class="n">fname</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Replace this string with the path to your log file"</span><span class="w">
 </span><span class="n">lf</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLogfile</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="w"> </span><span class="n">burnin</span><span class="o">=</span><span class="m">0.1</span><span class="p">)</span><span class="w">
 </span></code></pre></div>
 <p>Next, we can extract the HPDs of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and the becoming noninfectious rate: </p>

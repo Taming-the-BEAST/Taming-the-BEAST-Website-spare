@@ -83,7 +83,7 @@
       <file>Prior-selection-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>master-refs.bib</file>
+      <file>master-refs</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
