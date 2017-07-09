@@ -8,104 +8,247 @@
 				
 			<item>
 				<title>Prior selection</title>
-				<description>Prior selection and clock calibration using Influenza A data</description>
+				<description>
+					Prior selection and clock calibration using Influenza A data. by 
+					
+						
+								Veronika Bošková,Venelin Mitov,Louis du Plessis
+							
+								
+							
+					
+				</description>
 				<pubDate>Fri, 02 Jun 2017 11:47:04 +0100</pubDate>
+				<author>laduplessis</author>
+				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
 				<title>Skyline plots</title>
-				<description>Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.</description>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots. by 
+					
+						
+								Nicola F. Müller,Louis du Plessis
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 01 Jun 2017 14:55:11 +0100</pubDate>
+				<author>laduplessis</author>
+				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
-				<title>FBD tutorial</title>
-				<description>Dating Species Divergences with the Fossilized Birth-Death Process</description>
+				<title>Divergence Time Estimation using BEAST v2.x</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process by 
+					
+						
+								Tracy A. Heath
+							
+								
+							
+					
+				</description>
 				<pubDate>Wed, 17 May 2017 08:54:23 +0100</pubDate>
+				<author>trayc7</author>
+				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
 				<title>Bacter Tutorial</title>
-				<description>Taming the BEAST Tutorial for Bacter</description>
+				<description>
+					Inferring ARGs from bacterial sequence data. by 
+					
+						
+								Tim Vaughan
+							
+								
+							
+					
+				</description>
 				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
+				<author>tgvaughan</author>
+				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</guid>
 			</item>
 				
 			<item>
-				<title>adequacy_tutorial</title>
-				<description></description>
+				<title>Model adequacy using BEAST2</title>
+				<description>
+					Assessing clock and substitution models by 
+					
+						
+								David Duchêne
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 09 Feb 2017 01:43:32 +0000</pubDate>
+				<author>duchene</author>
+				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</guid>
 			</item>
 				
 			<item>
 				<title>Structured coalescent</title>
-				<description>Population structure using MultiTypeTree</description>
+				<description>
+					Population structure using MultiTypeTree by 
+					
+						
+								Nicola F. Müller,Tim Vaughan
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 09 Feb 2017 00:26:57 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-coalescent/</guid>
 			</item>
 				
 			<item>
-				<title>calibrated species trees</title>
-				<description>Tutorial for Taming the BEAST in the South Pacific</description>
+				<title>Calibrated Species Trees</title>
+				<description>
+					Estimating species divergence times using StarBEAST2 by 
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
+				<author>genomescale</author>
+				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</guid>
 			</item>
 				
 			<item>
-				<title>species tree clocks</title>
-				<description>Using StarBEAST2 with species tree relaxed clocks, for Taming the BEAST in the South Pacific</description>
+				<title>Species Trees with Relaxed Molecular Clocks</title>
+				<description>
+					Estimating per-species substitution rates using StarBEAST2 by 
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
+				<author>genomescale</author>
+				<category>Basic</category>
 				<link>http://taming-the-beast.github.io//tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/species-tree-clocks/</guid>
 			</item>
 				
 			<item>
 				<title>StarBeast Tutorial</title>
-				<description>Estimating species tree from multilocus sequence data</description>
+				<description>
+					Estimating species tree from multilocus sequence data by 
+					
+						
+								Joseph Heled,Remco Bouckaert,Walter Xie,Alexei J. Drummond,Chi Zhang
+							
+								
+							
+					
+				</description>
 				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</guid>
 			</item>
 				
 			<item>
 				<title>Troubleshooting</title>
-				<description>Post-processing and improving performance</description>
+				<description>
+					Post-processing and improving performance by 
+					
+						
+								David A. Rasmussen
+							
+								
+							
+					
+				</description>
 				<pubDate>Tue, 31 Jan 2017 23:18:13 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Troubleshooting/</guid>
 			</item>
 				
 			<item>
 				<title>Introduction to BEAST2</title>
-				<description>This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.</description>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices. by 
+					
+						
+								Jūlija Pečerska,Veronika Bošková
+							
+								
+							
+					
+				</description>
 				<pubDate>Wed, 18 Jan 2017 15:02:03 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
 				<title>Substitution model selection</title>
-				<description>A tutorial using bModelTest</description>
+				<description>
+					A tutorial using bModelTest by 
+					
+						
+								David A. Rasmussen,Carsten Magnus,Remco Bouckaert
+							
+								
+							
+					
+				</description>
 				<pubDate>Wed, 18 Jan 2017 14:51:48 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-selection/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-selection/</guid>
 			</item>
 				
 			<item>
 				<title>Structured birth death model</title>
-				<description>Population structure using the multi-type birth-death model</description>
+				<description>
+					Population structure using the multi-type birth-death model by 
+					
+						
+								Denise Kühnert
+							
+								
+							
+					
+				</description>
 				<pubDate>Wed, 07 Dec 2016 14:05:30 +0000</pubDate>
+				<author>laduplessis</author>
+				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</guid>
 			</item>
