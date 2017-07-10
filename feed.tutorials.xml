@@ -3,19 +3,19 @@
 	<channel>
 		<title>Taming the BEAST - Tutorials</title>
 		<description>BEAST2 tutorials for the community, by the community! - Recently modified tutorials</description>
-		<link>http://taming-the-beast.github.io/</link>
+		<link>http://taming-the-beast.github.io//tutorials</link>
 		<atom:link href="http://taming-the-beast.github.io//feed.tutorials.xml" rel="self" type="application/rss+xml" />
+		<image>
+			<url>http://taming-the-beast.github.io//images/logo_bw.svg</url>
+			<title>Taming the BEAST</title>
+			<link>http://taming-the-beast.github.io//tutorials</link>
+		</image>
 				
 			<item>
 				<title>Prior selection</title>
 				<description>
-					Prior selection and clock calibration using Influenza A data. by 
+					Prior selection and clock calibration using Influenza A data. By 
 					
-						
-								Veronika Bošková,Venelin Mitov,Louis du Plessis
-							
-								
-							
 					
 				</description>
 				<pubDate>Fri, 02 Jun 2017 11:47:04 +0100</pubDate>
@@ -28,13 +28,8 @@
 			<item>
 				<title>Skyline plots</title>
 				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots. by 
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots. By 
 					
-						
-								Nicola F. Müller,Louis du Plessis
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 01 Jun 2017 14:55:11 +0100</pubDate>
@@ -47,13 +42,8 @@
 			<item>
 				<title>Divergence Time Estimation using BEAST v2.x</title>
 				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process by 
+					Dating Species Divergences with the Fossilized Birth-Death Process By 
 					
-						
-								Tracy A. Heath
-							
-								
-							
 					
 				</description>
 				<pubDate>Wed, 17 May 2017 08:54:23 +0100</pubDate>
@@ -66,13 +56,8 @@
 			<item>
 				<title>Bacter Tutorial</title>
 				<description>
-					Inferring ARGs from bacterial sequence data. by 
+					Inferring ARGs from bacterial sequence data. By 
 					
-						
-								Tim Vaughan
-							
-								
-							
 					
 				</description>
 				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
@@ -85,13 +70,8 @@
 			<item>
 				<title>Model adequacy using BEAST2</title>
 				<description>
-					Assessing clock and substitution models by 
+					Assessing clock and substitution models By 
 					
-						
-								David Duchêne
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 09 Feb 2017 01:43:32 +0000</pubDate>
@@ -104,13 +84,8 @@
 			<item>
 				<title>Structured coalescent</title>
 				<description>
-					Population structure using MultiTypeTree by 
+					Population structure using MultiTypeTree By 
 					
-						
-								Nicola F. Müller,Tim Vaughan
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 09 Feb 2017 00:26:57 +0000</pubDate>
@@ -123,13 +98,8 @@
 			<item>
 				<title>Calibrated Species Trees</title>
 				<description>
-					Estimating species divergence times using StarBEAST2 by 
+					Estimating species divergence times using StarBEAST2 By 
 					
-						
-								Huw A. Ogilvie
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
@@ -142,13 +112,8 @@
 			<item>
 				<title>Species Trees with Relaxed Molecular Clocks</title>
 				<description>
-					Estimating per-species substitution rates using StarBEAST2 by 
+					Estimating per-species substitution rates using StarBEAST2 By 
 					
-						
-								Huw A. Ogilvie
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
@@ -161,13 +126,8 @@
 			<item>
 				<title>StarBeast Tutorial</title>
 				<description>
-					Estimating species tree from multilocus sequence data by 
+					Estimating species tree from multilocus sequence data By 
 					
-						
-								Joseph Heled,Remco Bouckaert,Walter Xie,Alexei J. Drummond,Chi Zhang
-							
-								
-							
 					
 				</description>
 				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
@@ -180,13 +140,8 @@
 			<item>
 				<title>Troubleshooting</title>
 				<description>
-					Post-processing and improving performance by 
+					Post-processing and improving performance By 
 					
-						
-								David A. Rasmussen
-							
-								
-							
 					
 				</description>
 				<pubDate>Tue, 31 Jan 2017 23:18:13 +0000</pubDate>
@@ -199,13 +154,8 @@
 			<item>
 				<title>Introduction to BEAST2</title>
 				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices. by 
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices. By 
 					
-						
-								Jūlija Pečerska,Veronika Bošková
-							
-								
-							
 					
 				</description>
 				<pubDate>Wed, 18 Jan 2017 15:02:03 +0000</pubDate>
@@ -218,13 +168,8 @@
 			<item>
 				<title>Substitution model selection</title>
 				<description>
-					A tutorial using bModelTest by 
+					A tutorial using bModelTest By 
 					
-						
-								David A. Rasmussen,Carsten Magnus,Remco Bouckaert
-							
-								
-							
 					
 				</description>
 				<pubDate>Wed, 18 Jan 2017 14:51:48 +0000</pubDate>
@@ -237,13 +182,8 @@
 			<item>
 				<title>Structured birth death model</title>
 				<description>
-					Population structure using the multi-type birth-death model by 
+					Population structure using the multi-type birth-death model By 
 					
-						
-								Denise Kühnert
-							
-								
-							
 					
 				</description>
 				<pubDate>Wed, 07 Dec 2016 14:05:30 +0000</pubDate>
