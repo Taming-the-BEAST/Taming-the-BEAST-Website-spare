@@ -366,6 +366,30 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/5f278eca4a709777603c3a1cc87c16fada3e2edb">
+					13 Jul 2017 - <span class="text-gray">Update latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/1259a28e5f3cde169af467e118dc4144ccb0bb0e">
+					13 Jul 2017 - <span class="text-gray">Small changes</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/5c0da1bad6c8bdb7f0c6eb269df8ba167013249e">
+					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/fb0332acafb68361adbb99a44169f924faac3799">
 					31 Jan 2017 - <span class="text-gray">Renamed files</span>
 					</a> 
@@ -376,32 +400,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/5da2ea0452d6a4f3c0ab79910972ba80ffad9518">
 					31 Jan 2017 - <span class="text-gray">Add title</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/6037e95c2273293e08b7d1712be624eed07ef5ab">
-					30 Jan 2017 - <span class="text-gray">Merge pull request #1 from andre-lichtsteiner/patch-1
-
-Minor changes - typos, inconsistency</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/a367944c3ddfb17a2a11198390091f3d8116b7cd">
-					26 Jan 2017 - <span class="text-gray">Minor changes - typos, inconsistency</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/47e0ae8e8c7ee1c4c6cf5e79f04e0ed73098e2d1">
-					18 Jan 2017 - <span class="text-gray">Add license</span>
 					</a> 
 				</li>
 			
@@ -421,13 +419,25 @@ Minor changes - typos, inconsistency</span>
 
 <p>In this tutorial, we will consider a relatively simple example where we would like to infer a phylogeny and evolutionary parameters from a small alignment of sequences.  Our job will be to work together to increase the efficiency of the MCMC so we can make BEAST purr...</p>
 
+<hr>
+
 <h1>Programs used in this Exercise</h1>
 
-<ul>
-<li> BEAUTi v2.4.1</li>
-<li> BEAST v2.4.1</li>
-<li> Tracer v1.6.1 </li>
-</ul>
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.1 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+
+<hr>
 
 <h1>Practical: Getting BEAST to purr</h1>
 
@@ -495,7 +505,7 @@ Minor changes - typos, inconsistency</span>
 
 <p><br></p>
 
-<p>We can also be see our posterior estimates for each parameter by clicking on the <strong>Estimates</strong> tab while highlighting the desired parameter in the left panel. This provides us with various summary statistics and a frequency histogram representing our estimate of the posterior distribution constructed from our MCMC samples. For the clockRate parameter, we can see that our estimate of the posterior is extremely rough, again because we have so few uncorrelated samples from the posterior (<a href="#fig:tracer_run1_ests">Figure 4</a>).</p>
+<p>We can also see our posterior estimates for each parameter by clicking on the <strong>Estimates</strong> tab while highlighting the desired parameter in the left panel. This provides us with various summary statistics and a frequency histogram representing our estimate of the posterior distribution constructed from our MCMC samples. For the clockRate parameter, we can see that our estimate of the posterior is extremely rough, again because we have so few uncorrelated samples from the posterior (<a href="#fig:tracer_run1_ests">Figure 4</a>).</p>
 
 <figure>
     <a id="fig:tracer_run1_ests"></a>

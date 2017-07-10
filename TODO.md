@@ -4,7 +4,7 @@
 - ~~Update programme for London~~ - **done**
 - Finalise London programme and add links for all tutorials
 - ~~Add paper link and citation to the website~~ - **done**
-- Add paper news item
+- ~~Add paper news item~~
 - Update contribute help (lower priority)
 - Update frontpage with new splash figure and updated text
 
@@ -22,6 +22,8 @@
 - Check and add markdown to latex script
 - Check and add latex to markdown script
 - Check and add latex template
+- Modify markdown to latex script to automatically add in page.beastversion etc.
+- favicon does not exist
 
 ---
 

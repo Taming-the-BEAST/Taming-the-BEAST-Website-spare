@@ -400,40 +400,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/3575568a7638eae44f972cfc0206ea52b9e242e5">
-					02 Jun 2017 - <span class="text-gray">Small changes</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/725dc9fd9b315c15198706d157c395038a49a540">
+					13 Jul 2017 - <span class="text-gray">Update latex tutorial</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/1c2880b510a1736fe8cfcbcac4e681844abd693d">
-					01 Jun 2017 - <span class="text-gray">Update latex tutorial</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/ee294f9eed34ca3e992769c77ea488d32069b996">
+					13 Jul 2017 - <span class="text-gray">Small changes</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/58e07fe86f279621494e3540b8b41a03117d97d8">
-					01 Jun 2017 - <span class="text-gray">Update tutorial</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/d5ad0c7eca385e5f776ab7c42e593be95a56fb3b">
+					13 Jul 2017 - <span class="text-gray">Update figures</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/ccb3d137f8880ba98f0b4a2794b7ad96b493c501">
-					01 Jun 2017 - <span class="text-gray">Add interpreting results</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/f273e3017d195065e02555d50a53ea5ccc0e6f73">
+					13 Jul 2017 - <span class="text-gray">Update text</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/7158866180bc0a2138c4c59c4e71788d03e66963">
-					01 Jun 2017 - <span class="text-gray">Update figurs</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/bfbe478e90ed3f09849aed7d88e8d8b5a0181c07">
+					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
 					</a> 
 				</li>
 			
@@ -447,35 +447,43 @@
 			<p>
 			<h1>Background</h1>
 
-<p>In the Bayesian analysis of sequence data, priors play an important role. When priors are not specified correctly it may cause runs to take very long to converge, not converge at all or cause a bias in the inferred trees and model parameters. Selection of proper priors and starting values is crucial and can be a difficult exercise in the beginning. It is not always easy to pick a proper model of tree generation (tree prior), substitution model, molecular clock model or the prior distribution for an unknown parameter. </p>
+<p>In the Bayesian analysis of sequence data, priors play an important role. When priors are not specified correctly, it may cause runs to take very long to converge, not converge at all or cause a bias in the inferred trees and model parameters. Selection of proper priors and starting values is crucial and can be a difficult exercise in the beginning. It is not always easy to pick a proper model of tree generation (tree prior), substitution model, molecular clock model or the prior distribution for an unknown parameter. </p>
 
 <p>The molecular clock model aims to estimate the substitution rate of the data. It is important to understand under which circumstances to use which model and when molecular calibration works. This will help the investigator determine which estimates of parameters can be trusted and which cannot.</p>
 
-<p>In this tutorial, we will explore how priors are selected and how molecular clock calibration works using the H3N2 influenza A data from the flu virus spreading in the USA in 2009. </p>
+<p>In this tutorial we will explore how priors are selected and how molecular clock calibration works using H3N2 influenza A data from the flu virus spreading in the USA in 2009. </p>
+
+<hr>
 
 <h1>Programs used in this Exercise</h1>
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.6 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
 
-<h3>BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
-<p>BEAUti is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
-<h3>Tracer</h3>
-
-<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.</p>
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
 <h3>TreeAnnotator</h3>
 
-<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree. It is also useful to summarise and visualise the posterior estimates of other tree parameters (e.g. node height). </p>
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
 
 <h3>FigTree</h3>
 
 <p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
 
-<h1>Practical: H3N2 flu dynamics - heterochronous data</h1>
+<hr>
+
+<h1>Practical: H3N2 flu dynamics - Heterochronous data</h1>
 
 <p>In this tutorial, we will estimate the rate of evolution from a set of virus sequences that have been isolated either at one point in time (homochronous) or at different points in time (heterochronous or time-stamped data). We use the hemagglutinin (HA) gene of the H3N2 strain spreading across America alongside the pandemic H1N1 virus in 2009 <a href="#cdc2009">(CDC, 2009/2010)</a>. </p>
 
@@ -504,15 +512,15 @@
 <p>We will use BEAUti to select the priors and starting values for our analysis and save these settings into a BEAST-readable XML file. </p>
 
 <blockquote>
-<p>Begin by starting the BEAUti program.</p>
+<p>Begin by starting BEAUti2.</p>
 </blockquote>
 
-<h3>Installing BEAST 2 Plug-Ins</h3>
+<h3>Installing BEAST2 Plug-Ins</h3>
 
 <p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.3.3 installed.</p>
 
 <blockquote>
-<p>Open the <strong>BEAST 2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
+<p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
 </blockquote>
 
 <figure>
@@ -535,10 +543,10 @@
 
 <p><br></p>
 
-<p>After the installation of an add-on, the program is on your computer, but BEAUti is unable to load the template files for the newly installed model unless it is restarted. So, let&#39;s restart BEAUti to make sure we have <strong>BDSKY</strong> model at hand.</p>
+<p>After the installation of an add-on, the program is on your computer, but BEAUti is unable to load the template files for the newly installed model unless it is restarted. So, let&#39;s restart BEAUti to make sure we have the <strong>BDSKY</strong> model at hand.</p>
 
 <blockquote>
-<p>Close the <strong>BEAST 2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>BDSKY</strong> package.</p>
+<p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>BDSKY</strong> package.</p>
 </blockquote>
 
 <h3>Importing alignment</h3>
@@ -561,7 +569,7 @@
 
 <h3>Setting up tip dates</h3>
 
-<p>The heterochronous dataset contains the information on when the sequences were sampled. We want to use this information to specify the tip dates in BEAUti. </p>
+<p>The heterochronous dataset contains information on the dates sequences were sampled. We want to use this information to specify the tip dates in BEAUti. </p>
 
 <blockquote>
 <p>In the <strong>Tip Dates</strong> panel, click the <strong>Use tip dates</strong> option. </p>
@@ -571,7 +579,7 @@
 
 <figure>
     <a id="timeUnitsAndFlow"></a>
-    <img style="width:75.0%;" src="figures/beast2_time_specification.png" alt="">
+    <img style="width:100.0%;" src="figures/beast2_time_specification.png" alt="">
     <figcaption>Figure 4: Specifying time units and direction of time flow.</figcaption>
 </figure>
 
@@ -580,14 +588,14 @@
 <p>You could specify the tip dates by hand, by clicking for each row (i.e. for each sequence) into the <strong>Date</strong> column and typing the date information in for each sequence in turn. However, this is a laborious and error-prone procedure and can take a long time to finish. Fortunately, we can use BEAUti, to read off the dates from the sequence names for us. Each sequence is named such that the expression after the last underscore character (&quot;_&quot;) contains the sampling date information. BEAUti can search for this expression to extract the sequence date.</p>
 
 <blockquote>
-<p>Press the <strong>Guess</strong> button. A window will appear where you can specify how BEAUti can find the date of sampling of each sequence. (<a href="#guessDates">Figure 5</a>)</p>
+<p>Press the <strong>Auto-configure</strong> button. A window will appear where you can specify how BEAUti can find the date of sampling of each sequence. (<a href="#guessDates">Figure 5</a>)</p>
 
 <p>Select <strong>use everything</strong> and specify <strong>after last</strong> _.</p>
 </blockquote>
 
 <figure>
     <a id="guessDates"></a>
-    <img style="width:75.0%;" src="figures/beast2_guess_dates.png" alt="">
+    <img style="width:50.0%;" src="figures/beast2_guess_dates.png" alt="">
     <figcaption>Figure 5: Specifying tip dates.</figcaption>
 </figure>
 
@@ -603,25 +611,21 @@
 <p>Navigate to the <strong>Site Model</strong> panel, where we can choose the model of nucleotide evolution that we want to assume to underly our dataset. </p>
 </blockquote>
 
-<p>Our dataset is made of nucleotide sequences. There are four models of nucleotide evolution available in BEAST2: JC69, HKY, TN93 and GTR. JC69 model is the simplest evolutionary model. All the substitutions are assumed to happen with the same rate and all the bases are assumed to have identical frequencies, i.e. each base A, C, G and T is assumed to have an equilibrium frequency of 0.25. In HKY model, the rate of transitions A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G and C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T is allowed to be different from the rate of transversions A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> C, G <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T. Furthermore, the frequency of each base can be either &quot;Estimated&quot;, &quot;Empirical&quot; or &quot;All Equal&quot;. When we set the frequencies to &quot;Estimated&quot;, the frequency of each base will be co-estimated as a parameter during the BEAST run. If we use &quot;Empirical&quot;, base frequencies will be set to the frequencies of each base found in the alignment. Finally, if set to &quot;All Equal&quot;, the base frequencies will be set to 0.25. The TN93 model is slightly more complicated than HKY, by allowing for different rates of A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G and C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T transitions. Finally, the GTR model is the most general model and allows for different substitution rates between each pair of nucleotides as well as different base frequencies, resulting in a total of 9 free parameters. </p>
+<p>Our dataset is made of nucleotide sequences. There are four models of nucleotide evolution available in BEAUti2: <strong>JC69, HKY, TN93</strong> and <strong>GTR</strong>. The <strong>JC69</strong> model is the simplest evolutionary model. All the substitutions are assumed to happen at the same rate and all the bases are assumed to have identical frequencies, i.e. each base <strong>A, C, G</strong> and <strong>T</strong> is assumed to have an equilibrium frequency of 0.25. In the <strong>HKY</strong> model, the rate of transitions <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G</strong> and <strong>C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong> is allowed to be different from the rate of transversions <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> C, G <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong>. Furthermore, the frequency of each base can be either &quot;Estimated&quot;, &quot;Empirical&quot; or &quot;All Equal&quot;. When we set the frequencies to &quot;Estimated&quot;, the frequency of each base will be co-estimated as a parameter during the BEAST run. If we use &quot;Empirical&quot;, base frequencies will be set to the frequencies of each base found in the alignment. Finally, if set to &quot;All Equal&quot;, the base frequencies will be set to 0.25. The <strong>TN93</strong> model is slightly more complicated than <strong>HKY</strong>, by allowing for different rates of <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G</strong> and <strong>C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong> transitions. Finally, the <strong>GTR</strong> model is the most general model and allows for different substitution rates between each pair of nucleotides as well as different base frequencies, resulting in a total of 9 free parameters. </p>
 
 <blockquote>
-<p><strong>QUESTION: Which substitution model may be the most appropriate for our dataset and why?</strong> </p>
-
-<p>You can discuss with your neighbour or with the teaching assistants if you like. After you have made your decision, continue with the tutorial.</p>
+<p><strong>Topic for discussion:</strong> Which substitution model may be the most appropriate for our dataset and why? </p>
 </blockquote>
 
-<p>Since we do not have any extra information on how the data evolved, the decision is not clear cut. The best would be to have some independent information on what model fits the influenza data the best. Alternatively, one could perform model comparison, or apply reversible jump MCMC (see for example the  bModelTest and substBMA packages) to choose the best model. Let&#39;s assume, we have done some independent data analyses and found the HKY model to fit the influenza data the best. In general, this model captures the major biases that can arise in the analysis of the nucleotide data. </p>
+<p>Since we do not have any extra information on how the data evolved, the decision is not clear cut. The best would be to have some independent information on what model fits the influenza data the best. Alternatively, one could perform model comparison, or apply reversible jump MCMC (see for example the  <strong>bModelTest</strong> and <strong>substBMA</strong> packages) to choose the best model. Let&#39;s assume, we have done some independent data analyses and found the HKY model to fit the influenza data the best. In general, this model captures the major biases that can arise in the analysis of the nucleotide data. </p>
 
 <p>Now we have to decide whether we want to assume all of the sites to have been subject to the same substitution rate or if we want to allow for the possibility that some sites are evolving faster than others. For this, we choose the number of gamma rate categories. This model scales the substitution rate by a factor, which is defined by a Gamma distribution. If we choose to split the Gamma distribution into 4 categories, we will have 4 possible scalings that will be applied to the substitution rate. The probability of a substitution at each site will be calculated under each scaled substitution rate (and corresponding transition probability matrix) and averaged over the 4 outcomes.</p>
 
 <blockquote>
-<p><strong>QUESTION: Do you think a model that assumes one rate for all the sites is preferable over a model which allows different substitution rates across sites (i.e. allows for several gamma rate categories)? Why or why not?</strong> </p>
-
-<p>You can again discuss with your neighbour or with the teaching assistants if you like. After you have made your decision, continue with the tutorial.</p>
+<p><strong>Topic for discussion:</strong> Do you think a model that assumes one rate for all the sites is preferable over a model which allows different substitution rates across sites (i.e. allows for several gamma rate categories)? Why or why not? </p>
 </blockquote>
 
-<p>Once again, a proper model comparison, i.e. comparing a model without gamma rate heterogeneity to a model with some number of gamma rate categories, should ideally be done. We do not have any independent information on whether gamma rate categories are needed or not. Thus, we take our best guess in order not to bias our analyses. Since the data are the sequences of the HA (hemagglutinin) gene of influenza, we may want to allow for variation of the substitution rates between sites. Hemagglutinin is a surface protein on the virus and is under significant evolutionary pressure from the immune system of the host organism. It is not unrealistic to assume that some sites may be under more pressure to escape from the immune system.</p>
+<p>Once again, a proper model comparison, i.e. comparing a model without gamma rate heterogeneity to a model with some number of gamma rate categories, should ideally be done. We do not have any independent information on whether Gamma rate categories are needed or not. Thus, we take our best guess in order not to bias our analyses. Since the data are the sequences of the HA (hemagglutinin) gene of influenza, we may want to allow for variation of the substitution rates between sites. Hemagglutinin is a surface protein on the virus and is under significant evolutionary pressure from the immune system of the host organism. It is not unrealistic to assume that some sites may be under more pressure to escape from the immune system.</p>
 
 <p>Let us therefore choose the HKY model with 4 gamma rate categories for the substitution rate. </p>
 
@@ -646,13 +650,13 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>Navigate to the <strong>Clock Model</strong> panel.</p>
 </blockquote>
 
-<p>Four different clock models are available in BEAST 2, allowing us to specify lineage-specific substitution rate variation. The default model in BEAUti is the <em>Strict Clock</em>. The other three models relax the assumption of a constant substitution rate. The <em>Relaxed Clock Log Normal</em> allows for the substitution rates associated with each branch to be independently drawn from a single, discretized log normal distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Under the <em>Relaxed Clock Exponential</em> model, the rates associated with each branch are drawn from an exponential distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Both of these models are uncorrelated relaxed clock models. The log normal distribution has the advantage that one can estimate its variance, which reflects the extent to which the molecular clock needs to be relaxed. In both models, BEAUti sets by default the <strong>Number Of Discrete Rates</strong> to -1. This means that the number of bins that the distribution is divided into is equal to the number of branches. The last available model is the <em>Random Local Clock</em> which averages over all possible local clock models <a href="#drummond10">(Drummond &amp; Suchard, 2010)</a>. </p>
+<p>Four different clock models are available in BEAST2, allowing us to specify lineage-specific substitution rate variation. The default model in BEAUti is the <em>Strict Clock</em>. The other three models relax the assumption of a constant substitution rate. The <em>Relaxed Clock Log Normal</em> allows for the substitution rates associated with each branch to be independently drawn from a single, discretized log normal distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Under the <em>Relaxed Clock Exponential</em> model, the rates associated with each branch are drawn from an exponential distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Both of these models are uncorrelated relaxed clock models. The log normal distribution has the advantage that one can estimate its variance, which reflects the extent to which the molecular clock needs to be relaxed. In both models, BEAUti sets by default the <strong>Number Of Discrete Rates</strong> to -1. This means that the number of bins that the distribution is divided into is equal to the number of branches. The last available model is the <em>Random Local Clock</em> which averages over all possible local clock models <a href="#drummond10">(Drummond &amp; Suchard, 2010)</a>. </p>
 
 <blockquote>
-<p><strong>QUESTION: Which clock model may be the most appropriate for our dataset and why?</strong> </p>
+<p><strong>Topic for discussion:</strong> Which clock model may be the most appropriate for our dataset and why?</p>
 </blockquote>
 
-<p>Since we are observing the sequence data from a single epidemic of H3N2 virus in humans in a single location (south-west of USA), we do not have any reason to assume different substitution rates for different lineages. Thus, the most straightforward option is to choose the default <strong>Strict Clock</strong> model (<a href="#clockModel">Figure 7</a>). Note however, that a rigorous model comparison would be the best way to proceed with the choice of the clock model.</p>
+<p>Since we are observing the sequence data from a single epidemic of H3N2 virus in humans in a single location (southwest USA), we do not have any reason to assume different substitution rates for different lineages. Thus, the most straightforward option is to choose the default <strong>Strict Clock</strong> model (<a href="#clockModel">Figure 7</a>). Note however, that a rigorous model comparison would be the best way to proceed with the choice of the clock model.</p>
 
 <figure>
     <a id="clockModel"></a>
@@ -696,7 +700,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 <p><br></p>
 
-<p>Notice that the pop-up window allows one to specify not only the <strong>Dimension</strong> but also the <strong>Minordimension</strong>. If the parameter is specified as a vector of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> entries, we only use the <strong>Dimension</strong> with input <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>. If the parameter is specified as an n x m matrix, we then use the <strong>Minordimension</strong> to specify the number of columns (m) the parameter is split into. In the birth-death skyline model, we use the parameter vector only, and thus the <strong>Minordimension</strong> always stays specified as 1. (In fact, <strong>Minordimension</strong> is only used very rarely in any BEAST2 model).</p>
+<p>Notice that the pop-up window allows one to specify not only the <strong>Dimension</strong> but also the <strong>Minordimension</strong>. If the parameter is specified as a vector of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> entries, we only use the <strong>Dimension</strong> with input <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>. If the parameter is specified as an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">×</span><span class="mord mathit">m</span></span></span></span> matrix, we then use the <strong>Minordimension</strong> to specify the number of columns (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>) the parameter is split into. In the birth-death skyline model, we use the parameter vector only, and thus the <strong>Minordimension</strong> always stays specified as 1. (In fact, <strong>Minordimension</strong> is only used very rarely in any BEAST2 model).</p>
 
 <p>After we have specified the prior for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the next prior that needs our attention is the <strong>becomeUninfectiousRate</strong>. This specifies how quickly a person infected with influenza recovers. From our personal experience, we would say, it takes around one week to 10 days from infection to recovery. Since the rate of becoming uninfectious is the reciprocal of the period of infectiousness this translates to a becoming uninfectious rate of 365/10=36.5 to 365/7 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 52.14 per year (recall that we specified dates in our tree in years, and not days). Let us set the prior for <strong>becomeUninfectiousRate</strong> rate accordingly. </p>
 
@@ -717,7 +721,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>Now we have to specify the clock rate prior. This is the prior for the substitution rate.</p>
 
 <blockquote>
-<p><strong>QUESTION: What substitution rate is appropriate for viruses? More specifically, what substitution rate is expected for influenza virus, in your opinion?</strong> </p>
+<p><strong>Topic for discussion:</strong> What substitution rate is appropriate for viruses? More specifically, what substitution rate is expected for influenza virus, in your opinion? </p>
 </blockquote>
 
 <p>By default, the clock rate in BEAST2 has a uniform prior between 0 and infinity. This is not only extremely unspecific, but also an improper prior (it does not integrate to 1). In general, a log-normal distribution works well for rates, since it does not allow negative values. Furthermore, it places most weight close to 0, while also allowing for larger values, making it an appropriate prior for the clock rate, which we expect to be quite low in general, but may be higher in exceptional cases. You could set your best guess as a prior by, for example, choosing a log-normal distribution centered around your best guess for the substitution rate.</p>
@@ -725,7 +729,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>Now consider the following information: Influenza virus is an RNA virus <a href="#kawaoka2006">(Kawaoka, 2006)</a> and RNA viruses in general, have a mutation rate of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. </p>
 
 <blockquote>
-<p><strong>QUESTION: Did you change your best guess, for the substitution rate appropriate for RNA viruses? What would it be? How would you specify the prior?</strong> </p>
+<p><strong>Topic for discussion:</strong> Did you change your best guess, for the substitution rate appropriate for RNA viruses? What would it be? How would you specify the prior?</p>
 </blockquote>
 
 <p>Our best guess would be to set the prior distribution peaked around 10<sup>-3</sup> substitutions per site per year.</p>
@@ -765,7 +769,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>For the next parameter, the origin of the epidemic, we ask ourselves whether there is any reasonable expectation we might have in terms of when the infection in California started, i.e. what is the date when the ancestor of all of the sequences first appeared.</p>
 
 <blockquote>
-<p><strong>QUESTION: Do you have any feeling for what the origin should/could be set to?</strong> </p>
+<p><strong>Topic for discussion:</strong> Do you have any feeling for what the origin should/could be set to?</p>
 </blockquote>
 
 <p>The data span a period of 3 months and come from a limited area; thus, it would be unreasonable to assume that a single season flu epidemic would last longer than a few months. The best guess for the origin parameter prior we could make is therefore on the order of at least 3-4, but probably no more than 6 months. We set the prior according to this expectation.</p>
@@ -882,7 +886,7 @@ Do the estimates look realistic?
 Are they different from the priors we set and if so, how?</p>
 </blockquote>
 
-<p>The estimated posterior distribution for the <strong>becomeUninfectiousRate</strong> has a median of 58.376 and a 95% HPD between 43.2389 and 77.6039 (<a href="#tracerdelta">Figure 19</a>). This is between<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 4.7 and 8.44 days, thus, roughly one week. This is a lot more specific than the prior we set, which allowed for a much longer infectious period. The estimates also agree with what we know about Influenza A. In this case there was enough information in the sequencing data to estimate a more specific becoming uninfectious rate. If we had relied more on our prior knowledge we could have set a tighter prior on the <strong>becomeUninfectiousRate</strong> parameter, which may have helped the run to converge faster, by preventing it from sampling unrealistic parameter values. However, if you are unsure about a parameter it is always better to set more diffuse priors. </p>
+<p>The estimated posterior distribution for the <strong>becomeUninfectiousRate</strong> has a median of 58.376 and a 95% HPD between 43.2389 and 77.6039 (<a href="#tracerdelta">Figure 19</a>). This is between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 4.7 and 8.44 days, thus, roughly one week. This is a lot more specific than the prior we set, which allowed for a much longer infectious period. The estimates also agree with what we know about Influenza A. In this case there was enough information in the sequencing data to estimate a more specific becoming uninfectious rate. If we had relied more on our prior knowledge we could have set a tighter prior on the <strong>becomeUninfectiousRate</strong> parameter, which may have helped the run to converge faster, by preventing it from sampling unrealistic parameter values. However, if you are unsure about a parameter it is always better to set more diffuse priors. </p>
 
 <figure>
     <a id="tracerdelta"></a>
@@ -892,7 +896,7 @@ Are they different from the priors we set and if so, how?</p>
 
 <p><br></p>
 
-<p>We see that the sampling proportion (<a href="#tracersampling">Figure 20</a>) is estimated to be below <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>×</mo></mrow><annotation encoding="application/x-tex">5 \times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">5</span><span class="mbin">×</span></span></span></span> 10<sup>-5</sup>. This a lot lower than the mean we set for the prior on the sampling proportion (0.001). Therefore our prior estimate of the sampling proportion was much too high. Consequently, we see that the number of cases is also much higher than we initially thought. We assumed that there are around 1,000 cases when we set the prior, however our posterior indicates that the epidemic has on the order of tens of thousands of cases. </p>
+<p>We see that the sampling proportion (<a href="#tracersampling">Figure 20</a>) is estimated to be below 5 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">×</span></span></span></span> 10<sup>-5</sup>. This a lot lower than the mean we set for the prior on the sampling proportion (0.001). Therefore our prior estimate of the sampling proportion was much too high. Consequently, we see that the number of cases is also much higher than we initially thought. We assumed that there are around 1,000 cases when we set the prior, however our posterior indicates that the epidemic has on the order of tens of thousands of cases. </p>
 
 <figure>
     <a id="tracersampling"></a>
@@ -912,7 +916,7 @@ Are they different from the priors we set and if so, how?</p>
 
 <p><br></p>
 
-<h1>Practical: H3N2 flu dynamics - homochronous data</h1>
+<h1>Practical: H3N2 flu dynamics - Homochronous data</h1>
 
 <p>We could also use the homochronous data to investigate the dynamics of the H3N2 spread in California in 2009. We use the 29 sequences from April 28, 2009 to investigate whether this is possible. </p>
 
@@ -928,15 +932,17 @@ Are they different from the priors we set and if so, how?</p>
 
 <p><br></p>
 
+<p>Save the file as <code>Homochronous.xml</code> and run it in BEAST2.</p>
+
 <h2>Estimating the substitution rate from homochronous data</h2>
 
-<blockquote>
-<p>After the run is finished, load the log file into Tracer. </p>
+<p>After the run is finished, load the log file into Tracer and examine the traces of the parameters. </p>
 
-<p>Examine the traces of the parameters. Do you think running the analysis for longer will lead to the run mixing well?</p>
+<blockquote>
+<p><strong>Topic for discussion:</strong> Do you think running the analysis for longer will lead to the run mixing well?</p>
 </blockquote>
 
-<p>Most of the parameters again have ESS values below 200, however in this case the ESS values are lower than for heterochronous data and it is not clear that running the analysis for longer will lead to mixing. Indeed, while running the analysis for longer increases increases the ESS values for some parameters, however they remain low for some parameters, in particular the <strong>origin</strong>, <strong>TreeHeight</strong> (tMRCA) and <strong>clockRate</strong>. Low ESS values for these parameters in turn translate into low ESS values for the tree prior (<strong>BirthDeathSkyContemporary</strong>), prior and posterior. </p>
+<p>Most of the parameters again have ESS values below 200, however in this case the ESS values are lower than for heterochronous data and it is not clear that running the analysis for longer will lead to mixing. Indeed, while running the analysis for longer increases increases the ESS values for some parameters, they remain low for some parameters, in particular the <strong>origin</strong>, <strong>TreeHeight</strong> (tMRCA) and <strong>clockRate</strong>. Low ESS values for these parameters in turn translate into low ESS values for the tree prior (<strong>BirthDeathSkyContemporary</strong>), prior and posterior. </p>
 
 <figure>
     <a id="tracerclocktrace2"></a>
@@ -949,11 +955,11 @@ Are they different from the priors we set and if so, how?</p>
 <p>Now, check the clock rate and the tree height parameters. </p>
 
 <blockquote>
-<p><strong>QUESTION: Do you think that homochronous samples allow for good substitution rate estimation?</strong> </p>
+<p><strong>Topic for discussion:</strong> Do you think that homochronous samples allow for good substitution rate estimation?</p>
 
-<p><strong>If yes, how would you know?</strong> </p>
+<p>If yes, how would you know?</p>
 
-<p><strong>If not, how can you see that and where do you think might the problem be? Can we address this problem in our analysis?</strong> </p>
+<p>If not, how can you see that and where do you think might the problem be? Can we address this problem in our analysis? </p>
 </blockquote>
 
 <p>Notice the values of the substitution rate estimates. From literature, one can read that influenza&#39;s HA gene has a substitution rate of about 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. Our estimate of the clock rate is of the same order as this value, but has a very large confidence interval. Notice also, that the confidence interval of the tree height is very large [0.1305,2.7393].</p>
@@ -1027,7 +1033,7 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
 <p>Open BEAUti, load the homochronous data and use the same settings as for the <code>Homochronous.xml</code> file.</p>
 
-<p>Create a new taxon set for root node by clicking the <strong>+</strong> at the bottom of the parameter list in the <strong>Priors</strong> window. Select <strong>MRCA prior</strong> in the dropdown menu and press <strong>OK</strong>. This will reveal the <strong>Taxon set editor</strong>.</p>
+<p>Create a new taxon set for root node by clicking the <strong>+ Add Prior</strong> button at the bottom of the parameter list in the <strong>Priors</strong> window. Select <strong>MRCA prior</strong> in the dropdown menu and press <strong>OK</strong>. This will reveal the <strong>Taxon set editor</strong>.</p>
 
 <p>Change the <strong>Taxon set</strong> label to <strong>allseq</strong>.</p>
 
@@ -1068,7 +1074,11 @@ Are they different from the priors we set and if so, how?</p>
 <p>Then, click on the arrow next to the <strong>treelog</strong> and add <code>_tMRCA</code> between <code>$(tree)</code> and <code>.trees</code> in the <strong>File Name</strong> field.</p>
 </blockquote>
 
-<p>Save the XML file as <code>Homochronous_tMRCA.xml</code> and run the analysis and compare to the original analysis of the homochronous data. Are the substitution rate estimates more precise now?  What about the correlation between the tMRCA and the clock rate?</p>
+<p>Save the XML file as <code>Homochronous_tMRCA.xml</code> and run the analysis and compare to the original analysis of the homochronous data. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Are the substitution rate estimates more precise now?  What about the correlation between the tMRCA and the clock rate?</p>
+</blockquote>
 
 <h1>Comparison between runs</h1>
 
@@ -1105,6 +1115,8 @@ Are they different from the priors we set and if so, how?</p>
 <p>On the <strong>TreeHeight</strong> we see that the marginal posterior estimated from homochronous data with a tMRCA prior is almost identical to the marginal posterior estimated on heterochronous data. However, estimates on homochronous data without a tMRCA prior are very diffuse, because there is not enough information in the data to accurately date the tMRCA. </p>
 
 <p>Note that while we can compare parameter estimates between heterochronous and homochronous data easily enough you should never compare the likelihoods or posteriors between analyses that were run on different datasets!</p>
+
+<hr>
 
 <h1>Useful Links</h1>
 
