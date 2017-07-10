@@ -14,9 +14,33 @@
 			<item>
 				<title>Prior selection</title>
 				<description>
-					Prior selection and clock calibration using Influenza A data. By 
+					Prior selection and clock calibration using Influenza A data.. By 
 					
 					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					.
+					<br>
+					Last update:
+					Small changes on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/3575568a7638eae44f972cfc0206ea52b9e242e5">
+					2 Jun 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Fri, 02 Jun 2017 11:47:04 +0100</pubDate>
 				<author>laduplessis</author>
@@ -28,9 +52,29 @@
 			<item>
 				<title>Skyline plots</title>
 				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots. By 
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.. By 
 					
 					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					.
+					<br>
+					Last update:
+					Update latex tutorial on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/8ed7feee4ce4ea754428857f2ffc93f9db1a14b0">
+					1 Jun 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Thu, 01 Jun 2017 14:55:11 +0100</pubDate>
 				<author>laduplessis</author>
@@ -42,9 +86,25 @@
 			<item>
 				<title>Divergence Time Estimation using BEAST v2.x</title>
 				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process By 
+					Dating Species Divergences with the Fossilized Birth-Death Process. By 
 					
 					
+						
+								Tracy A. Heath
+							
+								
+							
+					.
+					<br>
+					Last update:
+					final updates for Hinxton workshop. Moved the R plotting to the end because package installation may be unreliable on
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/302c755e98456135412d76eabdcf4c65c9b7a791">
+					17 May 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/trayc7">				
+					trayc7
+					</a>
 				</description>
 				<pubDate>Wed, 17 May 2017 08:54:23 +0100</pubDate>
 				<author>trayc7</author>
@@ -56,9 +116,25 @@
 			<item>
 				<title>Bacter Tutorial</title>
 				<description>
-					Inferring ARGs from bacterial sequence data. By 
+					Inferring ARGs from bacterial sequence data.. By 
 					
 					
+						
+								Tim Vaughan
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Fixed bug. on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/7a237f49117040ebb4689790a20c2eac63a6c7cd">
+					10 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/tgvaughan">				
+					tgvaughan
+					</a>
 				</description>
 				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
 				<author>tgvaughan</author>
@@ -70,9 +146,27 @@
 			<item>
 				<title>Model adequacy using BEAST2</title>
 				<description>
-					Assessing clock and substitution models By 
+					Assessing clock and substitution models. By 
 					
 					
+						
+								David Duchêne
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Merge pull request #3 from Taming-the-BEAST/master
+
+Actually fixed references on
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/20bedb145a7907aeec898fb858f71ddaabc7061c">
+					9 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/duchene">				
+					duchene
+					</a>
 				</description>
 				<pubDate>Thu, 09 Feb 2017 01:43:32 +0000</pubDate>
 				<author>duchene</author>
@@ -84,9 +178,29 @@
 			<item>
 				<title>Structured coalescent</title>
 				<description>
-					Population structure using MultiTypeTree By 
+					Population structure using MultiTypeTree. By 
 					
 					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Tim Vaughan
+								
+							
+					.
+					<br>
+					Last update:
+					Fix quotation marks on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/54671ed23159e131c4aeab3a670aea0fe0137146">
+					9 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Thu, 09 Feb 2017 00:26:57 +0000</pubDate>
 				<author>laduplessis</author>
@@ -98,9 +212,27 @@
 			<item>
 				<title>Calibrated Species Trees</title>
 				<description>
-					Estimating species divergence times using StarBEAST2 By 
+					Estimating species divergence times using StarBEAST2. By 
 					
 					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Merge pull request #1 from Taming-the-BEAST/master
+
+Add input data on
+					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf">
+					2 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/genomescale">				
+					genomescale
+					</a>
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
 				<author>genomescale</author>
@@ -112,9 +244,27 @@
 			<item>
 				<title>Species Trees with Relaxed Molecular Clocks</title>
 				<description>
-					Estimating per-species substitution rates using StarBEAST2 By 
+					Estimating per-species substitution rates using StarBEAST2. By 
 					
 					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Merge pull request #1 from Taming-the-BEAST/master
+
+Add data files and make bibtex compatible on
+					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/3dfde03173344dcd1dd623520e37091716f567a1">
+					2 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/genomescale">				
+					genomescale
+					</a>
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
 				<author>genomescale</author>
@@ -126,9 +276,41 @@
 			<item>
 				<title>StarBeast Tutorial</title>
 				<description>
-					Estimating species tree from multilocus sequence data By 
+					Estimating species tree from multilocus sequence data. By 
 					
 					
+						
+								Joseph Heled
+							
+					
+						
+								, Remco Bouckaert
+						
+					
+						
+								, Walter Xie
+						
+					
+						
+								, Alexei J. Drummond
+						
+					
+						
+								
+									and Chi Zhang
+								
+							
+					.
+					<br>
+					Last update:
+					Change level on
+					<a class="off" href="https://github.com/Taming-the-BEAST/StarBeast-Tutorial/commit/128840d025a64b8d5e562098c6f91e270dc63c0c">
+					2 Feb 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
 				<author>laduplessis</author>
@@ -140,9 +322,25 @@
 			<item>
 				<title>Troubleshooting</title>
 				<description>
-					Post-processing and improving performance By 
+					Post-processing and improving performance. By 
 					
 					
+						
+								David A. Rasmussen
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Renamed files on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/fb0332acafb68361adbb99a44169f924faac3799">
+					31 Jan 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Tue, 31 Jan 2017 23:18:13 +0000</pubDate>
 				<author>laduplessis</author>
@@ -154,9 +352,29 @@
 			<item>
 				<title>Introduction to BEAST2</title>
 				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices. By 
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.. By 
 					
 					
+						
+								Jūlija Pečerska
+							
+					
+						
+								
+									and Veronika Bošková
+								
+							
+					.
+					<br>
+					Last update:
+					Add license on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/97763b6b679d208c094790f3aa437298e568f562">
+					18 Jan 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Wed, 18 Jan 2017 15:02:03 +0000</pubDate>
 				<author>laduplessis</author>
@@ -168,9 +386,33 @@
 			<item>
 				<title>Substitution model selection</title>
 				<description>
-					A tutorial using bModelTest By 
+					A tutorial using bModelTest. By 
 					
 					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					.
+					<br>
+					Last update:
+					Add author name to footer on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-selection/commit/daa38aecbfcbc0999c56d69d1ce64fc06ee6be17">
+					18 Jan 2017
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Wed, 18 Jan 2017 14:51:48 +0000</pubDate>
 				<author>laduplessis</author>
@@ -182,9 +424,25 @@
 			<item>
 				<title>Structured birth death model</title>
 				<description>
-					Population structure using the multi-type birth-death model By 
+					Population structure using the multi-type birth-death model. By 
 					
 					
+						
+								Denise Kühnert
+							
+								
+							
+					.
+					<br>
+					Last update:
+					Fix references on
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/4f53def37841b7e88c32bc53e7d00c299de4113b">
+					7 Dec 2016
+					</a>
+					by
+					<a class="off" href="https://github.com/laduplessis">				
+					laduplessis
+					</a>
 				</description>
 				<pubDate>Wed, 07 Dec 2016 14:05:30 +0000</pubDate>
 				<author>laduplessis</author>
