@@ -4,7 +4,7 @@
 		<title>Taming the BEAST - News</title>
 		<description>BEAST2 tutorials for the community, by the community!</description>
 		<link>http://taming-the-beast.github.io/</link>
-		<atom:link href="http://taming-the-beast.github.io//feed.news.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://taming-the-beast.github.io/feed.news.xml" rel="self" type="application/rss+xml" />
 		<image>
 			<url>http://taming-the-beast.github.io//images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
