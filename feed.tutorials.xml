@@ -12,6 +12,182 @@
 		</image>
 				
 			<item>
+				<title>Divergence Time Estimation using BEAST v2.x</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/1f79261c671709757844ae1e551ad13337ccdacc'
+					&gt;
+						21 Jul 2017
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Merge pull request #1 from bjoelle/master
+
+Changes for TtB London
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.4
+					
+				</description>
+				<pubDate>Fri, 21 Jul 2017 22:04:40 +0100</pubDate>
+				<category>Intermediate</category>
+				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model averaging</title>
+				<description>
+					A tutorial using bModelTest
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/b23815a6a3dffbca68dfe7c9a96869e6e89edfa3'
+					&gt;
+						21 Jul 2017
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Small update for clarity
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.7
+					
+				</description>
+				<pubDate>Fri, 21 Jul 2017 10:17:30 +0100</pubDate>
+				<category>Intermediate</category>
+				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</guid>
+			</item>
+				
+			<item>
+				<title>SCOTTI Tutorial</title>
+				<description>
+					Transmission tree reconstruction with the structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Louis du Plessis
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/SCOTTI-Tutorial/commit/5f6a8967a37c64f7ba6923c18ba6abc7ba750286'
+					&gt;
+						21 Jul 2017
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Clean up
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.7
+					
+				</description>
+				<pubDate>Fri, 21 Jul 2017 09:48:04 +0100</pubDate>
+				<category>Professional</category>
+				<link>http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>MASCOT Tutorial</title>
+				<description>
+					Parameter and State inference using the approximate structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel/Mascot-Tutorial/commit/12b349ba663327d8c52d2c965fed975cc2fc7ba2'
+					&gt;
+						21 Jul 2017
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: Merge pull request #1 from Taming-the-BEAST/master
+
+Fix tutorial for website
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.7
+					
+				</description>
+				<pubDate>Fri, 21 Jul 2017 07:24:08 +0100</pubDate>
+				<category>Intermediate</category>
+				<link>http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Introduction to BEAST2</title>
 				<description>
 					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
@@ -147,55 +323,6 @@
 			</item>
 				
 			<item>
-				<title>Substitution model averaging</title>
-				<description>
-					A tutorial using bModelTest
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-					
-						
-								, Carsten Magnus
-						
-					
-						
-								
-									and Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/6e0415bef717ae7b33473636127654cf411b59eb'
-					&gt;
-						12 Jul 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Cleanup
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.7
-					
-				</description>
-				<pubDate>Wed, 12 Jul 2017 16:36:07 +0100</pubDate>
-				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
 				<title>Structured coalescent</title>
 				<description>
 					Population structure using MultiTypeTree
@@ -283,47 +410,6 @@
 				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Skyline-plots/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation using BEAST v2.x</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/302c755e98456135412d76eabdcf4c65c9b7a791'
-					&gt;
-						17 May 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/trayc7'
-					&gt;
-						trayc7
-					&lt;/a&gt;
-					: final updates for Hinxton workshop. Moved the R plotting to the end because package installation may be unreliable
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.4
-					
-				</description>
-				<pubDate>Wed, 17 May 2017 08:54:23 +0100</pubDate>
-				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -551,44 +637,6 @@ Add data files and make bibtex compatible
 				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/4f53def37841b7e88c32bc53e7d00c299de4113b'
-					&gt;
-						7 Dec 2016
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Fix references
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-				</description>
-				<pubDate>Wed, 07 Dec 2016 14:05:30 +0000</pubDate>
-				<category>Professional</category>
-				<link>http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</guid>
 			</item>
 		
 	</channel>

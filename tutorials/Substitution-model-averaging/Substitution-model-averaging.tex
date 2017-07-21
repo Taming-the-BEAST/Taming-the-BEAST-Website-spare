@@ -49,7 +49,7 @@ a model of molecular evolution that describes how our sequence data
 evolved. In particular, we need to decide on a substitution model that
 describes the relative rates at which different types of substitutions
 occur. For nucleotide data, the substitution model is typically
-represented as a $4 \times 4$ symmetric rate matrix $ Q $ with the
+represented as a 4x4 symmetric rate matrix $ Q $ with the
 general form:
 
 \begin{equation}
@@ -118,8 +118,8 @@ time-reversible (symmetric) nucleotide substitution models, which leaves
 us with 203 possible models. In addition, we can jump between models
 with empirical/estimated base frequencies, with/without gamma
 distributed rate heterogeneity and with/without invariant sites,
-resulting in a total of $203 \times 2 \times 2 \times 2 = 1,624$ possible model
-combinations. 
+resulting in a total of 203 x 2 x 2 x 2 = 1,624 possible model
+combinations. \clearpage
 
 \section{Programs used in this
 Exercise}\label{programs-used-in-this-exercise}
@@ -157,11 +157,13 @@ the effective sample sizes (ESS) of parameters. It can also be used to
 investigate potential parameter correlations. We will be using Tracer
 v1.6.0.
 
+\clearpage
+
 \section{Practical: Selecting a substitution
 model}\label{practical-selecting-a-substitution-model}
 
 In this tutorial we will go through an analysis using bModelTest in
-BEAST v2.4.7 and look into how to interpret the
+BEAST v\{\{ page.beastversion \}\} and look into how to interpret the
 results. This tutorial assumes that you have already done some of the
 other tutorials and that you are familiar with the basics of using
 BEAUti, BEAST and Tracer.
@@ -215,7 +217,7 @@ The Partition window should now look like Figure \ref{fig:partitions}.
 
 \begin{figure}
     \centering
-    \includegraphics[max width=\textwidth, max height=0.9\textheight]{figures/partitions.png}
+    \includegraphics[width=0.800000\textwidth]{figures/partitions.png}
     \caption{Linking the Site Model across partitions in BEAUti.}
     \label{fig:partitions}
 \end{figure}
@@ -231,7 +233,7 @@ it to \textbf{BEAST ModelTest} (Figure \ref{fig:siteModel}).
 
 \begin{figure}
     \centering
-    \includegraphics[max width=\textwidth, max height=0.9\textheight]{figures/siteModel.png}
+    \includegraphics[width=0.800000\textwidth]{figures/siteModel.png}
     \caption{Setting up the BEAST ModelTest.}
     \label{fig:siteModel}
 \end{figure}
@@ -253,10 +255,14 @@ change any of the default settings for this tutorial.
 
 \begin{framed}
 Click the \textbf{MCMC} tab in BEAUti. Change the chain length to
-5,000,000 and the sampling frequency to every 5,000. Change the
-\textbf{tracelog} and \textbf{treelog} file names to
-\lstinline!primate-mtDNA-bMT! and then click \textbf{File \textgreater{}
-Save As} and save as \lstinline!primate-mtDNA-bMT.xml!.
+5,000,000 and the sampling frequency to every 5,000 by changing
+\textbf{Log Every} under \textbf{tracelog} and \textbf{treelog}. This
+will help us to avoid autocorrelation by ensuring that we are not
+sampling too frequently. (You can also increase \textbf{Log Every} under
+\textbf{screenlog} to keep BEAST2 from producing too much screen
+output). Change the \textbf{tracelog} and \textbf{treelog} file names to
+\lstinline!primate-mtDNA-bMT! and click \textbf{File \textgreater{} Save
+As} and save as \lstinline!primate-mtDNA-bMT.xml!.
 \end{framed}
 
 \subsection{Run the analysis in BEAST}\label{run-the-analysis-in-beast}
@@ -296,7 +302,7 @@ model identifiable BEAUti arbitrarily fixes the clock rate to 1.
 \begin{itemize}
 \item
   We cannot estimate the substitution rate, so branches in the tree will
-  not be measured in units of time. What will be the units for branch
+  not be measured in calendar time. What will be the units for branch
   lengths in the estimated tree?
 \item
   Suppose we used individual substitution models for each partition.
@@ -509,6 +515,8 @@ for all models are shown in Figure \ref{fig:modelIndexes}.
 \textbf{Topic for discussion:} We have used bModelTest to explore a
 large set of substitution models. But how do we know that any of the
 substitution models actually fit the observed sequence data well?
+
+\clearpage
 \end{framed}
 
 \section{Acknowledgment}\label{acknowledgment}

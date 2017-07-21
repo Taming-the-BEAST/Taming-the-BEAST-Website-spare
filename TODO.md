@@ -18,6 +18,7 @@
 - Add Twitter feed to homepage
 - Header and footer do not rescale properly when the site is resized, and does not display properly on mobile devices (low priority)
 - Floating header/footer (only appears on scrolling, disappears otherwise) (low priority)
+- Sidebar in tutorials scrolls with tutorial (low priority)
 - Better search functionality for tutorials (low priority)
 - Check and add markdown to latex script
 - Check and add latex to markdown script

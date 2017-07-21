@@ -98,7 +98,7 @@
 	
 
 <div class="row">
-	<div class="col-md-12">
+	<div class="hidden-xs hidden-sm col-md-12">
 		<div class="bigtitle titlebox">
 			<ol class="breadcrumb">
 			
@@ -256,7 +256,7 @@
 			<div class="smallspacer"></div>				
 			<div>
 				<a class="off" href="https://github.com/laduplessis">
-    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/8872277?v=3&s=50">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
     				laduplessis
     			</div>
@@ -266,7 +266,7 @@
 			<div class="smallspacer"></div>				
 			<div>
 				<a class="off" href="https://github.com/magnuscar">
-    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/23211536?v=3&s=50">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/23211536?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
     				magnuscar
     			</div>
@@ -280,6 +280,14 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/b23815a6a3dffbca68dfe7c9a96869e6e89edfa3">
+					21 Jul 2017 - <span class="text-gray">Small update for clarity</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -313,19 +321,11 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/9daee2372cecc7619266b266249c5903e1acdf3f">
-					12 Jul 2017 - <span class="text-gray">Update LaTeX tutorial</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
-		
 	</div>
+
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
@@ -440,7 +440,7 @@ A useful consequence is that as we are exploring the space of different substitu
 <p>In the <strong>Clock Model</strong> and <strong>Prior</strong> tabs, we do not need to change any of the default settings for this tutorial.</p>
 
 <blockquote>
-<p>Click the <strong>MCMC</strong> tab in BEAUti. Change the chain length to 5,000,000 and the sampling frequency to every 5,000. Change the <strong>tracelog</strong> and <strong>treelog</strong> file names to <code>primate-mtDNA-bMT</code> and then click <strong>File &gt; Save As</strong> and save as <code>primate-mtDNA-bMT.xml</code>.</p>
+<p>Click the <strong>MCMC</strong> tab in BEAUti. Change the chain length to 5,000,000 and the sampling frequency to every 5,000 by changing <strong>Log Every</strong> under <strong>tracelog</strong> and <strong>treelog</strong>. This will help us to avoid autocorrelation by ensuring that we are not sampling too frequently. (You can also increase <strong>Log Every</strong> under <strong>screenlog</strong> to keep BEAST2 from producing too much screen output). Change the <strong>tracelog</strong> and <strong>treelog</strong> file names to <code>primate-mtDNA-bMT</code> and click <strong>File &gt; Save As</strong> and save as <code>primate-mtDNA-bMT.xml</code>.</p>
 </blockquote>
 
 <h2>Run the analysis in BEAST</h2>
@@ -467,7 +467,7 @@ A useful consequence is that as we are exploring the space of different substitu
 <p><strong>Topics for discussion:</strong> </p>
 
 <ul>
-<li><p>We cannot estimate the substitution rate, so branches in the tree will not be measured in units of time. What will be the units for branch lengths in the estimated tree?</p></li>
+<li><p>We cannot estimate the substitution rate, so branches in the tree will not be measured in calendar time. What will be the units for branch lengths in the estimated tree?</p></li>
 <li><p>Suppose we used individual substitution models for each partition. What does the estimated mutation rate for each partition represent? Would the rate of each partition be identifiable?</p></li>
 <li><p>What would happen if we removed the constraint to have a mean mutation rate of 1? What if we also added a calibration point?</p></li>
 </ul>
